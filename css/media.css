@@ -1,0 +1,593 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  
+}
+/* UTILITIES */
+.container{margin: auto;
+width: 100%;}
+/* HAMBURGER MENU */
+
+header{
+  display: block;
+  visibility: visible;}
+.menu-wrap {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  /* margin-left: 0.3rem; */
+  padding: 1rem ;
+  /* background: var(--secondary-color); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-color) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+  background: var(--primary-color);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+
+
+
+
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 300vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: var(--primary-color) ;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  color: var(--primary-hover) ;
+  padding: 2rem;
+}
+
+/* NAV */
+#nav{display: block;
+}
+
+#nav h3{display: flex;
+justify-content: center;
+padding: 0.2rem;
+}
+#nav .nav-list{
+  display: none;
+}
+/* MAIN-ARER */
+.mySlides {
+  display: none;
+  height: 50vh;
+}
+
+
+/* ABOUT */
+#read-btn{display: inline;
+  padding: 0.2rem;
+
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 10px;
+  text-align: center;}
+  #about-section{
+    font-size: 0.9rem;
+  }
+
+  #readmore{
+    display: none;
+    
+    
+  }
+/* services */
+
+ #services ul li,
+ #services .list-head{
+    font-size: 0.9rem;}
+
+/* contact */
+#form input,#form textarea {
+  max-width:400px ;
+}
+#form .submit-btn{
+  max-width: 400px;
+}
+/* giveaway */
+
+ 
+  /* max width 500px */
+  #giveaway{
+  margin: auto;
+  max-width:300px;
+  height: 300px;
+  
+}
+#giveaway .circle{
+  overflow: hidden;
+ width: 100%;
+ height:100%;
+
+  /* border-radius: 20%; */
+  margin: 1rem 0;
+ 
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+#giveaway .circle .logo-1{
+  width:70px;
+  height:70px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: logo1 1.5s forwards ease infinite;
+}
+@keyframes logo1 {
+  
+  50%{top: 115px;
+right: 115px;
+  }
+  
+}
+#giveaway .circle .logo-2{
+  margin: 0;
+  position: absolute;
+   width:70px;
+  height:70px;
+  top: 0;
+  left: 0;
+  animation: logo2 1.5s forwards ease infinite;
+}
+@keyframes logo2 {
+ 
+  50%{top: 115px;
+left: 115px;
+  }
+  
+}
+#giveaway .circle .logo-3{
+  width:70px;
+  height:70px;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  animation: logo3 1.5s forwards ease infinite;
+  
+}
+@keyframes logo3 {
+  50%{bottom: 115px;
+left: 115px;
+  }
+  
+}
+#giveaway .circle .logo-4{
+  width:70px;
+  height:70px;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+    right: 0;
+  
+  
+  animation: logo4 1.5s forwards ease infinite;
+}
+@keyframes logo4 {
+  
+    50%{bottom: 115px;
+right: 115px;
+  }
+  
+}
+#giveaway .circle .logo-5{
+  width:70px;
+  height:70px;
+  margin: 0;
+  position: absolute;
+  bottom: 115px;
+  left: 115px;
+  animation: logo5 1.5s forwards ease infinite;
+}
+@keyframes logo5 {
+  from{filter: opacity(0);}
+  to{filter: opacity(1);}
+  
+}
+#giveaway .circle .tlogo-1{
+  margin: 0;
+  width:70px;
+  height:70px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: tlogo1 1s forwards ease infinite ;
+ 
+}
+@keyframes tlogo1 {
+  25%{top: 0;
+    right: 230px;
+
+  }
+  50%{top: 230px
+    ;
+    right: 230px;
+}
+}
+  
+#giveaway .circle .tlogo-2{
+  margin: 0;
+  width:70px;
+  height:70px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: tlogo2 1s forwards ease infinite;
+}
+@keyframes tlogo2 {
+  25%{top: 230px;
+    left: 0px;
+
+  }
+  50%{left: 230px
+    ;
+    top: 230px;
+}
+}
+
+#giveaway .circle .tlogo-3{
+  margin: 0;
+  width:70px;
+  height:70px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: tlogo3 1s forwards ease infinite;
+  
+}
+@keyframes tlogo3 {
+ 25%{ left:230px;
+    bottom: 0px;
+   
+  }
+  50%{left: 230px
+    ;
+    bottom: 230px;
+}
+}
+#giveaway .circle .tlogo-4{
+  margin: 0;
+  width:70px;
+  height:70px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  animation: tlogo4 1s forwards ease infinite;
+}
+@keyframes tlogo4 {
+   25%{ right: 0px;
+    bottom: 230px;
+   
+  }
+  50%{right: 230px
+    ;
+    bottom: 230px;
+}
+}
+#giveaway .circle .tlogo-5{
+  margin: 0;
+  width:70px;
+  height:70px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 115px;
+  left: 115px;
+  animation: tlogo5 0.7s forwards ease infinite;
+}
+@keyframes tlogo5 {
+  from{filter: opacity(0);}
+  to{filter: opacity(1);}
+  
+}
+#giveaway .circle .tlogoo-1 {
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 0 0 red);
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: tlogoo1 2s ease forwards infinite;
+}
+@keyframes tlogoo1 {
+ 20%{
+    top: 0;
+    right: 230px;
+  }
+ 40% {
+    top: 230px;
+    right: 230px;
+  }
+  60% {
+    right: 0;
+    top: 230px;
+  }
+ 80%{
+    top: 0;
+    right: 0;
+  }
+  100%{
+    top:113px ;
+    right: 113px;
+    filter: drop-shadow(0 0 0 green);
+  }
+}
+#giveaway .circle .tlogoo-2 {
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  filter: drop-shadow(0 0 0 blue);
+  top: 0;
+  left: 0;
+  animation: tlogoo2 4s ease forwards infinite;
+}
+@keyframes tlogoo2 {
+  
+  20% {
+    top: 230px;
+    left: 0px;
+     filter: drop-shadow(0 0 0 blue);
+  }
+  40% {
+    left: 230px;
+    top: 230px;
+     filter: drop-shadow(0 0 0 blue);
+  }
+  60%{
+    top: 0;
+    left: 230px;
+     filter: drop-shadow(0 0 0 blue);
+  }
+ 80%{
+    top:0px ;
+    left: 0px;
+  
+  }
+  100%{
+    top:115px ;
+    left: 115px;
+    filter: drop-shadow(0 0 0 green);
+  }
+}
+
+#giveaway .circle .tlogoo-3 {
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 0 0 yellow);
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: tlogoo3 8s forwards ease infinite;
+}
+@keyframes tlogoo3 {
+ 20%{
+    left: 230px;
+    bottom: 0px;
+     filter: drop-shadow(0 0 0 yellow);
+  }
+ 40% {
+    left: 230px;
+    bottom: 230px;
+     filter: drop-shadow(0 0 0 yellow);
+  }
+  60% {
+    bottom: 230px;
+    left: 0px;
+     filter: drop-shadow(0 0 0 yellow);
+  }
+ 80%{
+    bottom: 0;
+    left: 0;
+    
+  }
+  100%{
+    bottom:115px ;
+    left: 115px;
+    filter: drop-shadow(0 0 0 green);
+  }
+
+}
+#giveaway .circle .tlogoo-4 {
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 0 0 purple);
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  animation: tlogoo4 16s forwards ease infinite;
+}
+@keyframes tlogoo4 {
+ 20%{
+    right: 0px;
+    bottom: 230px;
+    filter: drop-shadow(0 0 0 purple);
+  }
+ 40% {
+    right: 230px;
+    bottom: 230px;
+     filter: drop-shadow(0 0 0 purple);
+  }
+  60% {
+    bottom: 0px;
+    right: 230px;
+     filter: drop-shadow(0 0 0 purple);
+  }
+ 80%{
+    bottom: 0;
+    right: 0;
+    
+    
+  }
+  100%{
+    bottom: 115px;
+    right: 115px;
+    filter: drop-shadow(0 0 0 green);
+  }
+}
+#giveaway .circle .tlogoo-5 {
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 0 0 green);
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 115px;
+  left: 115px;
+ 
+}
+@keyframes tlogoo5 {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+

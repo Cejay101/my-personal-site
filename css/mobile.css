@@ -1,0 +1,430 @@
+ /*Modal-section*/
+#modal{
+  position: fixed;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  /*background-color: rgba(225, 225, 225, 0.4);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+
+.modal-contents{
+  background-color: white;
+  color: black;
+  height: 100px;
+  width: 250px;
+}
+
+.modal-header{
+  display: block;
+  float: right;
+}
+
+.modal-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalBtn{
+  color: grey;
+  margin-right: 15px;
+
+}
+
+.modalBtn:hover{
+  cursor: pointer;
+  color: black;
+
+}
+
+ 
+ @media (max-width: 600px) {
+    #giveaway{
+  margin: auto;
+  max-width:450px;
+  height: 450px;
+  
+}
+#giveaway .circle{
+  overflow: hidden;
+ width: 100%;
+ height:100%;
+
+  /* border-radius: 20%; */
+  margin: 1rem 0;
+ 
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+#giveaway .circle .logo-1{
+  width:100px;
+  height:100px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: logo1 1.5s forwards ease infinite;
+}
+@keyframes logo1 {
+  
+  50%{top: 175px;
+right: 175px;
+  }
+  
+}
+#giveaway .circle .logo-2{
+  margin: 0;
+  position: absolute;
+   width:100px;
+  height:100px;
+  top: 0;
+  left: 0;
+  animation: logo2 1.5s forwards ease infinite;
+}
+@keyframes logo2 {
+ 
+  50%{top: 175px;
+left: 175px;
+  }
+  
+}
+#giveaway .circle .logo-3{
+  width:100px;
+  height:100px;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  animation: logo3 1.5s forwards ease infinite;
+  
+}
+@keyframes logo3 {
+  50%{bottom: 175px;
+left: 175px;
+  }
+  
+}
+#giveaway .circle .logo-4{
+  width:100px;
+  height:100px;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+    right: 0;
+  
+  
+  animation: logo4 1.5s forwards ease infinite;
+}
+@keyframes logo4 {
+  
+    50%{bottom: 175px;
+right: 175px;
+  }
+  
+}
+#giveaway .circle .logo-5{
+  width:100px;
+  height:100px;
+  margin: 0;
+  position: absolute;
+  bottom: 175px;
+  left: 175px;
+  animation: logo5 1.5s forwards ease infinite;
+}
+@keyframes logo5 {
+  from{filter: opacity(0);}
+  to{filter: opacity(1);}
+  
+}
+#giveaway .circle .tlogo-1{
+  margin: 0;
+  width:100px;
+  height:100px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: tlogo1 1s ease forwards  ;
+ 
+}
+@keyframes tlogo1 {
+  25%{top: 0;
+    right: 175px;
+
+  }
+  50%{top: 175px
+    ;
+    right: 175px;
+}
+}
+  
+#giveaway .circle .tlogo-2{
+  margin: 0;
+  width:100px;
+  height:100px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: tlogo2 1s forwards ease ;
+}
+@keyframes tlogo2 {
+  25%{top: 175px;
+    left: 0px;
+
+  }
+  50%{left: 175px
+    ;
+    top: 175px;
+}
+}
+
+#giveaway .circle .tlogo-3{
+  margin: 0;
+  width:100px;
+  height:100px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: tlogo3 1s forwards ease ;
+  
+}
+@keyframes tlogo3 {
+ 25%{ left:175px;
+    bottom: 0px;
+   
+  }
+  50%{left: 175px
+    ;
+    bottom: 175px;
+}
+}
+#giveaway .circle .tlogo-4{
+  margin: 0;
+  width:100px;
+  height:100px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  animation: tlogo4 1s forwards ease ;
+}
+@keyframes tlogo4 {
+   25%{ right: 0px;
+    bottom: 175px;
+   
+  }
+  50%{right: 175px
+    ;
+    bottom: 175px;
+}
+}
+#giveaway .circle .tlogo-5{
+  margin: 0;
+  width:100px;
+  height:100px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 175px;
+  left: 175px;
+  animation: tlogo5 0.7s forwards ease ;
+}
+@keyframes tlogo5 {
+  from{filter: opacity(0);}
+  to{filter: opacity(1);}
+  
+}
+#giveaway .circle .tlogoo-1 {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 0 red);
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: tlogoo1 2s ease forwards infinite;
+}
+@keyframes tlogoo1 {
+ 20%{
+    top: 0;
+    right: 350px;
+  }
+ 40% {
+    top: 350px;
+    right: 350px;
+  }
+  60% {
+    right: 0;
+    top: 350px;
+  }
+ 80%{
+    top: 0;
+    right: 0;
+  }
+  100%{
+    top:173px ;
+    right: 173px;
+    filter: drop-shadow(0 0 0 green);
+  }
+}
+#giveaway .circle .tlogoo-2 {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  filter: drop-shadow(0 0 0 blue);
+  top: 0;
+  left: 0;
+  animation: tlogoo2 4s ease forwards infinite;
+}
+@keyframes tlogoo2 {
+  
+  20% {
+    top: 350px;
+    left: 0px;
+     filter: drop-shadow(0 0 0 blue);
+  }
+  40% {
+    left: 350px;
+    top: 350px;
+     filter: drop-shadow(0 0 0 blue);
+  }
+  60%{
+    top: 0;
+    left: 350px;
+     filter: drop-shadow(0 0 0 blue);
+  }
+ 80%{
+    top:0px ;
+    left: 0px;
+  
+  }
+  100%{
+    top:350px ;
+    left: 350px;
+    filter: drop-shadow(0 0 0 green);
+  }
+}
+
+#giveaway .circle .tlogoo-3 {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 0 yellow);
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: tlogoo3 8s forwards ease infinite;
+}
+@keyframes tlogoo3 {
+ 20%{
+    left: 350px;
+    bottom: 0px;
+     filter: drop-shadow(0 0 0 yellow);
+  }
+ 40% {
+    left: 350px;
+    bottom: 350px;
+     filter: drop-shadow(0 0 0 yellow);
+  }
+  60% {
+    bottom: 350px;
+    left: 0px;
+     filter: drop-shadow(0 0 0 yellow);
+  }
+ 80%{
+    bottom: 0;
+    left: 0;
+    
+  }
+  100%{
+    bottom:350px ;
+    left: 350px;
+    filter: drop-shadow(0 0 0 green);
+  }
+
+}
+#giveaway .circle .tlogoo-4 {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 0 purple);
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  animation: tlogoo4 16s forwards ease infinite;
+}
+@keyframes tlogoo4 {
+ 20%{
+    right: 0px;
+    bottom: 350px;
+    filter: drop-shadow(0 0 0 purple);
+  }
+ 40% {
+    right: 350px;
+    bottom: 350px;
+     filter: drop-shadow(0 0 0 purple);
+  }
+  60% {
+    bottom: 0px;
+    right: 350px;
+     filter: drop-shadow(0 0 0 purple);
+  }
+ 80%{
+    bottom: 0;
+    right: 0;
+    
+    
+  }
+  100%{
+    bottom: 175px;
+    right: 175px;
+    filter: drop-shadow(0 0 0 green);
+  }
+}
+#giveaway .circle .tlogoo-5 {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 0 green);
+  background: url(../Images/Cjayplug.png) no-repeat center center/cover;
+  position: absolute;
+  bottom: 175px;
+  left: 175px;
+ 
+}
+@keyframes tlogoo5 {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+
+
+
+  }
+
+
+  .gameLevel2{
+    display: none;
+  }
+  
+  .gameLevel3{
+    display: none;
+  }
+  
