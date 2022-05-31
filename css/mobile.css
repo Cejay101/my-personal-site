@@ -251,7 +251,7 @@ right: 175px;
   position: absolute;
   top: 0;
   right: 0;
-  animation: tlogoo1 2s ease forwards infinite;
+  animation: tlogoo1 0.25s ease forwards infinite;
 }
 @keyframes tlogoo1 {
  20%{
@@ -271,8 +271,8 @@ right: 175px;
     right: 0;
   }
   100%{
-    top:173px ;
-    right: 173px;
+    top:172px ;
+    right: 172px;
     filter: drop-shadow(0 0 0 green);
   }
 }
@@ -285,7 +285,7 @@ right: 175px;
   filter: drop-shadow(0 0 0 blue);
   top: 0;
   left: 0;
-  animation: tlogoo2 4s ease forwards infinite;
+  animation: tlogoo2 0.5s ease forwards infinite;
 }
 @keyframes tlogoo2 {
   
@@ -325,7 +325,7 @@ right: 175px;
   position: absolute;
   bottom: 0;
   left: 0;
-  animation: tlogoo3 8s forwards ease infinite;
+  animation: tlogoo3 1s forwards ease infinite;
 }
 @keyframes tlogoo3 {
  20%{
@@ -365,7 +365,7 @@ right: 175px;
   bottom: 0;
   right: 0;
 
-  animation: tlogoo4 16s forwards ease infinite;
+  animation: tlogoo4 2s forwards ease infinite;
 }
 @keyframes tlogoo4 {
  20%{
