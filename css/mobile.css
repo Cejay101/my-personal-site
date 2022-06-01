@@ -271,8 +271,8 @@ right: 175px;
     right: 0;
   }
   100%{
-    top:172px ;
-    right: 172px;
+    top:174px ;
+    right: 174px;
     filter: drop-shadow(0 0 0 green);
   }
 }
